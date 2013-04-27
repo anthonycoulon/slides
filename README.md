@@ -7,16 +7,5 @@ To initialize the Slide you just have to call 'new Slide(param)' between script 
 - slide
 - rotate
 
-Example :
-"<body> 
-	<section id="container">
-		<article>Slide 1</article>
-		<article>Slide 2</article>
-		...
-	</section>
-	<script type="text/javascript">
-		new Slide('rotate');
-	</script>
-</body>"
 
 Copyright (C) 2013 Anthony Coulon

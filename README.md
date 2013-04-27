@@ -8,7 +8,7 @@ To initialize the Slide you just have to call 'new Slide(param)' between script 
 - rotate
 
 Example :
-<!--<body> 
+"<body> 
 	<section id="container">
 		<article>Slide 1</article>
 		<article>Slide 2</article>
@@ -17,6 +17,6 @@ Example :
 	<script type="text/javascript">
 		new Slide('rotate');
 	</script>
-</body>-->
+</body>"
 
 Copyright (C) 2013 Anthony Coulon

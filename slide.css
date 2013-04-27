@@ -1,0 +1,150 @@
+/*author Anthony Coulon*/
+
+body {
+	margin: 0;
+	padding: 0;
+	display: block !important;
+	height: 100%;
+	min-height: 740px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	transition: 2s;
+}
+
+section#container {
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+
+	-webkit-transform-style: preserve-3d;
+}
+
+section#repere {
+	position: absolute;
+	left: 50%;
+	/*top: 94%;*/
+	bottom: 1%;
+}
+section#repere span {
+	margin-right: 5px;
+	padding: 5px;
+	background: url('./img/slide_rondG.png') no-repeat;
+}
+
+section#repere span.current {
+	background: url('./img/slide_rondB.png') no-repeat;
+}
+
+article {
+	width: 900px;
+	min-width: auto;
+	height: 600px;
+	min-height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -350px;
+	margin-left: -475px;
+	padding: 30px;
+	border: 2px solid grey;
+	border-radius: 10px;
+	background-color: white;
+	display: none;
+
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	-ms-perspective: 1300px;
+	-o-perspective: 1300px;
+	perspective: 1300px;
+
+	transition:  .5s ease-in-out;
+	
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+article.current {
+	display: block;
+	
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+article.next_cube {
+	display: block;
+	opacity: 0;
+	
+	-webkit-transform-origin: 0% 0%;
+	-moz-transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+	-o-transform-origin: 0% 0%;
+	transform-origin: 0% 0%;
+
+	-webkit-transform: translate3d(100%, 0, 0) rotateY(90deg);
+	-moz-transform: translate3d(100%, 0, 0) rotateY(90deg);
+	-ms-transform: translate3d(100%, 0, 0) rotateY(90deg);
+	-o-transform: translate3d(100%, 0, 0) rotateY(90deg);
+	transform: translate3d(100%, 0, 0) rotateY(90deg);
+}
+article.past_cube {
+	display: block;
+	opacity: 0;
+
+	-webkit-transform-origin: 100% 0%;
+	-moz-transform-origin: 100% 0%;
+	-ms-transform-origin: 100% 0%;
+	-o-transform-origin: 100% 0%;
+	transform-origin: 100% 0%;
+
+	-webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+	-moz-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+	-ms-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+	-o-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+	transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+}
+article.next_slide {
+	display: block;
+	opacity: 0;
+	
+	-webkit-transform: translate3d(100%, 0, 0);
+	-moz-transform: translate3d(100%, 0, 0);
+	-ms-transform: translate3d(100%, 0, 0);
+	-o-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+article.past_slide {
+	display: block;
+	opacity: 0;
+
+	-webkit-transform: translate3d(-100%, 0, 0);
+	-moz-transform: translate3d(-100%, 0, 0);
+	-ms-transform: translate3d(-100%, 0, 0);
+	-o-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+}
+article.next_rotate {
+	display: block;
+	opacity: 0;
+	
+	-webkit-transform: translate3d(100%, 0, 0) rotateZ(180deg);
+	-moz-transform: translate3d(100%, 0, 0);
+	-ms-transform: translate3d(100%, 0, 0);
+	-o-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+article.past_rotate {
+	display: block;
+	opacity: 0;
+
+	-webkit-transform: translate3d(-100%, 0, 0) rotateZ(-180deg);
+	-moz-transform: translate3d(-100%, 0, 0);
+	-ms-transform: translate3d(-100%, 0, 0);
+	-o-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+}

@@ -1,117 +1,47 @@
 <html>
 <head>
 	<!-- author Anthony Coulon -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="slide.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="js/Slide.js"></script>
-	<script src="js/Bind.js"></script>
+	<script src="Slide.js"></script>
+
+	<meta name="Subject" content="Anthony Coulon CV">
+	<meta name="keywords" content="anthony, coulon, ingenieur, engineer, cv">
+	<meta name="description" content="Anthony Coulon CV IT engineer" />
+	<meta name="Rating" content="General" />
+	<meta name="Robots" content="All" />
+	<meta content="Coulon Anthony" name="dc:creator" />
+	<meta content="Anthony Coulon CV" name="dc:title" />
+	<meta content="Anthony Coulon CV IT engineer" name="dc:description" />
+
+
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 </head>
 <body>
 	<section id="container">
-		<article class="current">
-			<h1>Welcome ...</h1>
-			<footer>
-				<section class="line"></section>
-				<span>
-					<img src="img/icon_google_plus.png">
-				</span>
-				<span>
-					<img src="img/icon_twitter.png">
-				</span>
-				<span>
-					<img src="img/icon_viadeo.jpg">
-				</span>
-				<span>
-					<img src="img/icon_facebook.png">
-				</span>
-				<span style="float:right; margin-right:59px;">Anthony Coulon</span>
-			</footer>
+		<article>
+			Slide 1
+			<br/><br/><br/><br/>
+			<label for="style">Choose your animation : </label>
+			<input name="style" value=''/> (cube / slide / rotate)
+			<br/><br/>
+			To navigate, use the keyboard arrows (right or left)<br/>
+			Or click on right or on left side<br/>
 		</article>
-		<article class="next">
-			Slide next 0
-			<footer>
-				<section class="line"></section>
-				<span>
-					<img src="img/icon_google_plus.png">
-				</span>
-				<span>
-					<img src="img/icon_twitter.png">
-				</span>
-				<span>
-					<img src="img/icon_viadeo.jpg">
-				</span>
-				<span>
-					<img src="img/icon_facebook.png">
-				</span>
-				<span style="float:right; margin-right:59px;">Anthony Coulon</span>
-			</footer>
+		<article>
+			Slide 2
 		</article>
-		<article class="far_next">
-			Slide next 1
-			<footer>
-				<section class="line"></section>
-				<span>
-					<img src="img/icon_google_plus.png">
-				</span>
-				<span>
-					<img src="img/icon_twitter.png">
-				</span>
-				<span>
-					<img src="img/icon_viadeo.jpg">
-				</span>
-				<span>
-					<img src="img/icon_facebook.png">
-				</span>
-				<span style="float:right; margin-right:59px;">Anthony Coulon</span>
-			</footer>
+		<article>
+			Slide 3
 		</article>
-		<article class="far_next">
-			Slide next 2
-			<footer>
-				<section class="line"></section>
-				<span>
-					<img src="img/icon_google_plus.png">
-				</span>
-				<span>
-					<img src="img/icon_twitter.png">
-				</span>
-				<span>
-					<img src="img/icon_viadeo.jpg">
-				</span>
-				<span>
-					<img src="img/icon_facebook.png">
-				</span>
-				<span style="float:right; margin-right:59px;">Anthony Coulon</span>
-			</footer>
-		</article>
-		<article class="far_next">
-			
-			Bye...
-			<section style="float:right">
-				<img src="img/photos_profil.JPG">
-			</section>
-
-			<footer>
-				<section class="line"></section>				
-				<span>
-					<img src="img/icon_google_plus.png">
-				</span>
-				<span>
-					<img src="img/icon_twitter.png">
-				</span>
-				<span>
-					<img src="img/icon_viadeo.jpg">
-				</span>
-				<span>
-					<img src="img/icon_facebook.png">
-				</span>
-				<span style="float:right; margin-right:59px;">Anthony Coulon</span>
-			</footer>			
+		<article>
+			Slide 4
 		</article>
 		<section id="repere"></section>
 	</section>
 	<script type="text/javascript">
-		new Slide();
+		new Slide('rotate');
 	</script>
 </body>
 </html>

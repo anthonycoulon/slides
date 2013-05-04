@@ -20,19 +20,20 @@ section#container {
 	-webkit-transform-style: preserve-3d;
 }
 
-section#repere {
+section#landmark {
 	position: absolute;
-	left: 50%;
-	/*top: 94%;*/
-	bottom: 1%;
+	text-align: center;
+	width: 100%;
+	bottom: 1;
+	z-index: 10;
 }
-section#repere span {
+section#landmark span {
 	margin-right: 5px;
 	padding: 5px;
 	background: url('./img/slide_rondG.png') no-repeat;
 }
 
-section#repere span.current {
+section#landmark span.current {
 	background: url('./img/slide_rondB.png') no-repeat;
 }
 

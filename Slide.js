@@ -19,7 +19,9 @@ Slide = function(_options) {
 Slide.prototype.init = function() {
 	this.initClassSlide();
 	this.initActionSlide();
-	this.initRepere();
+
+	$('section#container').append('<section id="landmark"></section>');
+	this.initLandmark();
 
 	$('article')
 		.css('width', this.options.width)
@@ -62,14 +64,14 @@ Slide.prototype.initActionSlide = function() {
 	}));
 };
 
-Slide.prototype.initRepere = function () {
+Slide.prototype.initLandmark = function () {
 	var articles = $('article');
-	$('section#repere').empty();
+	$('section#landmark').empty();
 	for(var i=0;i<articles.length;i++){
 		if($(articles[i]).attr('class')=='current'){
-			$('section#repere').append('<span class="current"></span>');
+			$('section#landmark').append('<span class="current"></span>');
 		}else {
-			$('section#repere').append('<span></span>');
+			$('section#landmark').append('<span></span>');
 		}
 	}
 };
@@ -84,7 +86,7 @@ Slide.prototype.next = function(_event) {
 
 		$($('article.far_next')[0]).toggleClass('far_next next_'+this.options.style);
 				
-		this.initRepere();	
+		this.initLandmark();	
 	}
 };
 Slide.prototype.previous = function(_event) {
@@ -98,7 +100,7 @@ Slide.prototype.previous = function(_event) {
 		
 		$($('article.far_past')[$('article.far_past').length-1]).toggleClass('far_past past_'+this.options.style);
 
-		this.initRepere();
+		this.initLandmark();
 	}
 };
 

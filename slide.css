@@ -37,20 +37,13 @@ section#repere span.current {
 }
 
 article {
-	width: 900px;
+	display: none;
 	min-width: auto;
-	height: 600px;
 	min-height: auto;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-top: -350px;
-	margin-left: -475px;
-	padding: 30px;
-	border: 2px solid grey;
 	border-radius: 10px;
-	background-color: white;
-	display: none;
 
 	-webkit-perspective: 1000px;
 	-moz-perspective: 1000px;

@@ -1,19 +1,42 @@
 // author Anthony Coulon
 
-Slide = function(_style) {
-	this.style = _style;
+Slide = function(_options) {
+	
+	this.options = $.extend({}, {
+		style:'slide',
+		width:'900px',
+		height:'600px',
+		marginTop:'-350px',
+		marginLeft:'-475px',
+		padding:'30px',
+		backgroundColor:'white',
+		border:'none'
+	}, _options);
 
+	this.init();
+};
+
+Slide.prototype.init = function() {
 	this.initClassSlide();
 	this.initActionSlide();
 	this.initRepere();
+
+	$('article')
+		.css('width', this.options.width)
+		.css('height', this.options.height)
+		.css('margin-top', this.options.marginTop)
+		.css('margin-left', this.options.marginLeft)
+	 	.css('padding', this.options.padding)
+	 	.css('background-color', this.options.backgroundColor)
+	 	.css('border', this.options.border);
 };
 
 Slide.prototype.initClassSlide = function() {
 	var articles = $('article');
-	$(articles[0]).addClass('current');
-	$(articles[1]).addClass('next_'+this.style);
+	$(articles[0]).toggleClass('current');
+	$(articles[1]).toggleClass('next_'+this.options.style);
 	for(var i=2; i<articles.length; i++){
-		$(articles[i]).addClass('far_next');
+		$(articles[i]).toggleClass('far_next');
 	}
 };
 
@@ -36,7 +59,7 @@ Slide.prototype.initActionSlide = function() {
 		var style=$('input[name=style]').val();
 		if(style=='slide' || style=='cube' || style=='rotate'){
 			this.resetClassSlide();
-			this.style=style;
+			this.options.style=style;
 			this.initClassSlide();
 			$('input[name=style]').val('');
 		}
@@ -57,7 +80,7 @@ Slide.prototype.initActionSlide = function() {
 			var style=$('input[name=style]').val();
 			if(style){
 				this.resetClassSlide();
-				this.style=style;
+				this.options.style=style;
 				this.initClassSlide();
 				$('input[name=style]').val('');
 			}
@@ -84,29 +107,29 @@ Slide.prototype.initRepere = function () {
 	}
 };
 Slide.prototype.next = function(_event) {
-	if($('article.next_'+this.style).length>0){
+	if($('article.next_'+this.options.style).length>0){
 
-		$('article.next_'+this.style).toggleClass('next_'+this.style+' current');
+		$('article.next_'+this.options.style).toggleClass('next_'+this.options.style+' current');
 				
-		$('article.past_'+this.style).toggleClass('past_'+this.style+' far_past');
+		$('article.past_'+this.options.style).toggleClass('past_'+this.options.style+' far_past');
 
-		$($('article.current')[0]).toggleClass('current past_'+this.style);
+		$($('article.current')[0]).toggleClass('current past_'+this.options.style);
 
-		$($('article.far_next')[0]).toggleClass('far_next next_'+this.style);
+		$($('article.far_next')[0]).toggleClass('far_next next_'+this.options.style);
 				
 		this.initRepere();	
 	}
 };
 Slide.prototype.previous = function(_event) {
-	if($('article.past_'+this.style).length>0){
+	if($('article.past_'+this.options.style).length>0){
 
-		$('article.past_'+this.style).toggleClass('past_'+this.style+' current');
+		$('article.past_'+this.options.style).toggleClass('past_'+this.options.style+' current');
 		
-		$('article.next_'+this.style).toggleClass('next_'+this.style+' far_next');
+		$('article.next_'+this.options.style).toggleClass('next_'+this.options.style+' far_next');
 
-		$($('article.current')[1]).toggleClass('current next_'+this.style);
+		$($('article.current')[1]).toggleClass('current next_'+this.options.style);
 		
-		$($('article.far_past')[$('article.far_past').length-1]).toggleClass('far_past past_'+this.style);
+		$($('article.far_past')[$('article.far_past').length-1]).toggleClass('far_past past_'+this.options.style);
 
 		this.initRepere();
 	}

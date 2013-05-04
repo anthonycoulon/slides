@@ -1,4 +1,10 @@
-// author Anthony Coulon
+/* 
+---------------------------------------
+author : Anthony Coulon
+email : coulon.anthony@gmail.com
+Slide javascript API for HTML5 page
+--------------------------------------- 
+*/
 
 Slide = function(_options) {
 	

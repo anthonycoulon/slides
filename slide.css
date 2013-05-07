@@ -76,6 +76,8 @@ article.current {
 	-o-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 }
+
+/*CUBE STYLE*/
 article.next_cube {
 	display: block;
 	opacity: 0;
@@ -108,6 +110,8 @@ article.past_cube {
 	-o-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
 	transform: translate3d(-100%, 0, 0) rotateY(-90deg);
 }
+
+/*SLIDE STYLE*/
 article.next_slide {
 	display: block;
 	opacity: 0;
@@ -128,7 +132,9 @@ article.past_slide {
 	-o-transform: translate3d(-100%, 0, 0);
 	transform: translate3d(-100%, 0, 0);
 }
-article.next_rotate {
+
+/*ROTATE-Z STYLE*/
+article.next_rotate-z {
 	display: block;
 	opacity: 0;
 	
@@ -138,7 +144,7 @@ article.next_rotate {
 	-o-transform: translate3d(100%, 0, 0);
 	transform: translate3d(100%, 0, 0);
 }
-article.past_rotate {
+article.past_rotate-z {
 	display: block;
 	opacity: 0;
 
@@ -147,4 +153,26 @@ article.past_rotate {
 	-ms-transform: translate3d(-100%, 0, 0);
 	-o-transform: translate3d(-100%, 0, 0);
 	transform: translate3d(-100%, 0, 0);
+}
+
+/*ROTATE-X STYLE*/
+article.next_rotate-x {
+	display: block;
+	opacity: 0;
+	
+	-webkit-transform: translate3d(100%, 0, 0) rotateX(-45deg);
+	-moz-transform: translate3d(100%, 0, 0) rotateX(-45deg);
+	-ms-transform: translate3d(100%, 0, 0) rotateX(-45deg);
+	-o-transform: translate3d(100%, 0, 0) rotateX(-45deg);
+	transform: translate3d(100%, 0, 0) rotateX(-45deg);
+}
+article.past_rotate-x {
+	display: block;
+	opacity: 0;
+
+	-webkit-transform: translate3d(-100%, 0, 0) rotateX(-45deg);
+	-moz-transform: translate3d(-100%, 0, 0) rotateX(-45deg);
+	-ms-transform: translate3d(-100%, 0, 0) rotateX(-45deg);
+	-o-transform: translate3d(-100%, 0, 0) rotateX(-45deg);
+	transform: translate3d(-100%, 0, 0) rotateX(-45deg);
 }

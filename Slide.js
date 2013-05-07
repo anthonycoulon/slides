@@ -55,6 +55,16 @@ Slide.prototype.resetClassSlide = function() {
 		$(articles[i]).removeAttr('class');
 	}
 };
+
+Slide.prototype.getStyle = function(_event) {
+	var style=$('input[name=style]').val();
+	if(style=='slide' || style=='cube' || style=='rotate-x'|| style=='rotate-z'){
+		this.resetClassSlide();
+		this.options.style=style;
+		this.initClassSlide();
+		$('input[name=style]').val('');
+	}
+};
 //---
 
 Slide.prototype.initActionSlide = function() {
@@ -64,13 +74,7 @@ Slide.prototype.initActionSlide = function() {
 		var width = $('body').width();
 
 		//--- hack for demo : 
-		var style=$('input[name=style]').val();
-		if(style=='slide' || style=='cube' || style=='rotate'){
-			this.resetClassSlide();
-			this.options.style=style;
-			this.initClassSlide();
-			$('input[name=style]').val('');
-		}
+		this.getStyle();
 		//---
 
 		if(position<width/2){
@@ -85,13 +89,7 @@ Slide.prototype.initActionSlide = function() {
 
 		//--- hack for demo : 
 		if(code==39 || code==37){
-			var style=$('input[name=style]').val();
-			if(style){
-				this.resetClassSlide();
-				this.options.style=style;
-				this.initClassSlide();
-				$('input[name=style]').val('');
-			}
+			this.getStyle();
 		}
 		//---
 

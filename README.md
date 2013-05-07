@@ -14,7 +14,7 @@ To initialize the Slide you just have to call 'new Slide(options)' between scrip
   backgroundColor:'white',
   border:'none' }
 
-'style' option can have different values : slide / rotate / cube
+'style' option can have different values : slide / rotate-x / rotate-z / cube
 
 
 Copyright (C) 2013 Anthony Coulon
